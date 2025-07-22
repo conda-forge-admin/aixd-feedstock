@@ -13,9 +13,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: | 
-    {{ PYTHON }} -m pip install . -vv
-    {{ PYTHON }} -m pip install "kaleido<1.0.0"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -28,6 +26,7 @@ requirements:
     - scipy >=1.8.1
     - scikit-learn >=0.23.0
     - plotly ~=6.0.0
+    - python-kaleido <1.0.0
     - pytorch >=2.0.0
     - wandb
     - pytorch-lightning >=2.0.0
